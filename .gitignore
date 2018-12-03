@@ -1,0 +1,13 @@
+InvestmentTracker/bin/*
+InvestmentTracker/obj/*
+InvestmentTracker.Contracts/obj/*
+InvestmentTracker.Contracts/bin/*
+InvestmentTracker.DAL/obj/*
+InvestmentTracker.DAL/bin/*
+InvestmentTracker.Database/obj/*
+InvestmentTracker.Database/bin/*
+InvestmentTracker.Services/obj/*
+InvestmentTracker.Services/bin/*
+InvestmentTracker.Shared/obj/*
+InvestmentTracker.Shared/bin/*
+.vs/*

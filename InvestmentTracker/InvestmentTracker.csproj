@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.AzureAD.UI" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\InvestmentTracker.Contracts\InvestmentTracker.Contracts.csproj" />
+    <ProjectReference Include="..\InvestmentTracker.Services\InvestmentTracker.Services.csproj" />
+    <ProjectReference Include="..\InvestmentTracker.Shared\InvestmentTracker.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
