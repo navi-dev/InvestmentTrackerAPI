@@ -11,3 +11,6 @@ InvestmentTracker.Services/bin/*
 InvestmentTracker.Shared/obj/*
 InvestmentTracker.Shared/bin/*
 .vs/*
+api_client/*
+/InvestmentTracker.Database/InvestmentTracker.Database.jfm
+/InvestmentTracker.Database/InvestmentTracker.Database.dbmdl
