@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using InvestmentTracker.Contracts.ServiceInterface;
 using InvestmentTracker.DAL.Models;
 using InvestmentTracker.Services.Account;
@@ -47,6 +48,21 @@ namespace InvestmentTracker
             });
 
             IntegrateSwagger(services);
+
+            // Auto Mapper Configurations
+            SetupAutoMapper(services);
+
+        }
+
+        private static void SetupAutoMapper(IServiceCollection services)
+        {
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new AutoMapperSetup());
+            });
+
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
         }
 
         private static void IntegrateSwagger(IServiceCollection services)

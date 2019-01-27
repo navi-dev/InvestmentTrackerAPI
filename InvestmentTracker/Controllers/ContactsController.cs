@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using InvestmentTracker.Contracts.DomainModel;
+using InvestmentTracker.Contracts.ServiceInterface;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InvestmentTracker.Controllers
@@ -12,12 +9,19 @@ namespace InvestmentTracker.Controllers
     [ApiController]
     public class ContactsController : ControllerBase
     {
+        IContactService _contactService;
+
+        public ContactsController(IContactService contactService)
+        {
+            _contactService = contactService;
+        }
+
         [HttpGet]
         [Route("api/[Controller]")]
         [Authorize]
         public ActionResult<IEnumerable<string>> Get()
         {
-            //var contacts = _contactService.Get();
+            var contacts = _contactService.Get();
             return new string[] { "value1", "value2" };
         }
 
@@ -25,7 +29,7 @@ namespace InvestmentTracker.Controllers
         [Route("api/[Controller]/{contactId}")]
         public ActionResult<string> Get(int contactId)
         {
-            //var contacts = _contactService.Get();
+            var contacts = _contactService.Get(contactId);
             return "value1";
         }
 
@@ -33,7 +37,7 @@ namespace InvestmentTracker.Controllers
         [Route("api/[Controller]/create")]
         public ActionResult<string> CreateContact(ContactDto contact)
         {
-            //var contacts = _contactService.Get();
+            var contacts = _contactService.Add(contact);
             return "value1";
         }
 
