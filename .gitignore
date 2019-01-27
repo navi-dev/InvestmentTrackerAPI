@@ -1,3 +1,7 @@
+wwwroot/*.js
+node_modules
+typings
+dist
 InvestmentTracker/bin/*
 InvestmentTracker/obj/*
 InvestmentTracker.Contracts/obj/*
@@ -14,3 +18,4 @@ InvestmentTracker.Shared/bin/*
 api_client/*
 /InvestmentTracker.Database/InvestmentTracker.Database.jfm
 /InvestmentTracker.Database/InvestmentTracker.Database.dbmdl
+
